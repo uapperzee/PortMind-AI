@@ -112,6 +112,6 @@ https://uapperzee.github.io/bob-ai-hackathon--EntropyX-/PortMind-AI/
 
 ## 🏅 What We're Most Proud Of
 
-[Tell the judges what part of your submission is strongest and worth paying close attention to.]
+We are most proud of turning complex port and shipment-disruption information into a simple, actionable dashboard. PORTMIND AI combines risk detection, AI-powered analysis, and alternative-route recommendations to help logistics teams identify potential problems early and make faster, smarter decisions.
 
 ---
