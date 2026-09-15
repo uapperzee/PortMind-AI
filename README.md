@@ -93,10 +93,10 @@ https://uapperzee.github.io/bob-ai-hackathon--EntropyX-/PortMind-AI/
 
 | Artifact | Link |
 |---|---|
-| 📹 Demo Video | [See demo/demo-video-link.txt](demo/demo-video-link.md) |
-| 🌐 Live Demo | [See demo/live-demo-url.txt](demo/live-demo-url.txt) |
-| 🖼️ Screenshots | [See demo/screenshots/](demo/screenshots/) |
-| 📊 Presentation | [See presentation/slides.pdf](presentation/) |
+| 📹 Demo Video | [See demo-video](demo/demo-video-link.md) |
+| 🌐 Live Demo | [See live-demo](demo/live-demo-url.md) |
+| 🖼️ Screenshots | [See screenshots/](demo/screenshots/README.md) |
+| 📊 Presentation | [See presentation](presentation/README.md) |
 
 ---
 
