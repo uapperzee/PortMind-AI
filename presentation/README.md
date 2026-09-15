@@ -1,3 +1,3 @@
 # Presentation
 
-[slides.pdf](https://github.com/user-attachments/files/32249555/slides.pdf)
+https://drive.google.com/drive/folders/16BtcXqjAFgEe6-dH3AuV-WdQt8y8mDhI
