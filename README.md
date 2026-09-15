@@ -45,11 +45,11 @@ It also generates a 72-hour port operations plan with real-time alerts and recom
 
 | Category | Technologies |
 |---|---|
-| **Languages** | [e.g., Python, TypeScript] |
-| **Frameworks** | [e.g., FastAPI, React] |
-| **IBM Technologies** | [e.g., watsonx.ai, IBM Bob, IBM Cloud] |
-| **Databases** | [e.g., PostgreSQL, Redis] |
-| **Other** | [e.g., Docker, GitHub Actions] |
+| **Languages** | HTML , CSS , JavaScript |
+| **Frameworks** | FastAPI, React |
+| **IBM Technologies** | watsonx.ai, IBM Bob, IBM Cloud |
+| **Databases** | - |
+| **Other** | GitHub, REST API |
 
 ---
 
