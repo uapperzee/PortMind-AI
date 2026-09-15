@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard â€” PortMind AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<div class="app-layout">
+
+  <!-- â”€â”€ SIDEBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">P</div>
+      <div class="logo-text">
+        <span class="logo-name">PortMind</span>
+        <span class="logo-sub">AI</span>
+      </div>
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M15 8l-6-6-1.4 1.4L12.2 8l-4.6 4.6L9 14z"/><path d="M8 8L2 2 .6 3.4 5.2 8 .6 12.6 2 14z"/></svg>
+      </button>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <span class="nav-section-label">Operations</span>
+
+      <a href="dashboard.html" class="nav-item" data-page="dashboard.html">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2h5v5H2zm7 0h5v5H9zm-7 7h5v5H2zm7 0h5v5H9z" opacity=".6"/><path d="M2 2h5v5H2z"/></svg>
+        </span>
+        <span class="nav-label">Dashboard</span>
+      </a>
+
+      <a href="vessels.html" class="nav-item" data-page="vessels.html">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M14 11H2L1 14h14l-1-3zM8 1L4 8h8L8 1zm0 2.5L10.2 8H5.8L8 3.5z"/></svg>
+        </span>
+        <span class="nav-label">Vessel Operations</span>
+      </a>
+
+      <a href="berths.html" class="nav-item" data-page="berths.html">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M1 3h14v2H1zm0 4h14v2H1zm0 4h14v2H1z"/></svg>
+        </span>
+        <span class="nav-label">Berth Management</span>
+      </a>
+
+      <a href="cranes.html" class="nav-item" data-page="cranes.html">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4 14V4H2v10H1v1h14v-1h-1V4h-2v10H4zM7 2h2v2H7V2z"/></svg>
+        </span>
+        <span class="nav-label">Crane Operations</span>
+      </a>
+
+      <a href="yard.html" class="nav-item" data-page="yard.html">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="4" width="6" height="4" rx="1"/><rect x="9" y="4" width="6" height="4" rx="1"/><rect x="1" y="10" width="6" height="4" rx="1"/><rect x="9" y="10" width="6" height="4" rx="1"/></svg>
+        </span>
+        <span class="nav-label">Yard Intelligence</span>
+      </a>
+
+      <a href="disruptions.html" class="nav-item" data-page="disruptions.html">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1L1 13h14L8 1zm0 3l4.5 7.5h-9L8 4zm-.5 2v3h1V6h-1zm0 4v1h1v-1h-1z"/></svg>
+        </span>
+        <span class="nav-label">Disruptions</span>
+        <span class="nav-badge" id="disruptionCount">5</span>
+      </a>
+
+      <span class="nav-section-label">AI Tools</span>
+
+      <a href="simulator.html" class="nav-item" data-page="simulator.html">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="2"/><path d="M8 2a6 6 0 100 12A6 6 0 008 2zm0 1.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z" opacity=".6"/></svg>
+        </span>
+        <span class="nav-label">AI Simulator</span>
+      </a>
+
+      <a href="copilot.html" class="nav-item" data-page="copilot.html">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2a5 5 0 110 10A5 5 0 018 3zm-1 3v2.5l2 1.2-.5.9-2.5-1.5V6H7z"/></svg>
+        </span>
+        <span class="nav-label">AI Copilot</span>
+      </a>
+
+      <a href="reports.html" class="nav-item" data-page="reports.html">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4 1h8l3 3v11H1V1h3zm7 0v3h3L11 1zM3 7h10V6H3v1zm0 2h10V8H3v1zm0 2h7v-1H3v1z"/></svg>
+        </span>
+        <span class="nav-label">Reports</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="#" class="nav-item" id="notifNavBtn">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a5.5 5.5 0 00-5.5 5.5v3L1 11v1h14v-1l-1.5-1.5v-3A5.5 5.5 0 008 1zM6.5 13a1.5 1.5 0 003 0h-3z"/></svg>
+        </span>
+        <span class="nav-label">Notifications</span>
+        <span class="nav-badge" id="notifNavCount">5</span>
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2a5 5 0 110 10A5 5 0 018 3zM7 6h2v2H7V6zm0 3h2v4H7V9z"/></svg>
+        </span>
+        <span class="nav-label">Help</span>
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 5a3 3 0 100 6A3 3 0 008 5zm0 1.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM6.5 1L5 3H2a1 1 0 00-1 1v8a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1h-3L9.5 1h-3z" opacity=".7"/></svg>
+        </span>
+        <span class="nav-label">Settings</span>
+      </a>
+      <div class="sidebar-user">
+        <div class="user-avatar">JM</div>
+        <div class="user-info">
+          <div class="user-name">J. Mueller</div>
+          <div class="user-role">Port Operations Manager</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- â”€â”€ MAIN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M2 4h14v1.5H2zm0 4h14v1.5H2zm0 4h14v1.5H2z"/></svg>
+      </button>
+      <div class="topbar-breadcrumb">
+        <span>PortMind AI</span>
+        <span class="crumb-sep">â€º</span>
+        <span class="crumb-current">Dashboard</span>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-status">
+          <span class="status-dot warning" id="portStatusDot"></span>
+          <span id="portStatusLabel">Port Status: HIGH CONGESTION</span>
+        </div>
+        <div class="topbar-status" style="margin-left:8px;">
+          <span class="status-dot" style="background:var(--accent-cyan);"></span>
+          <span style="color:var(--accent-cyan);font-size:11px;font-weight:600;">AI ACTIVE</span>
+        </div>
+        <span class="topbar-time" id="topbarTime"></span>
+        <button class="topbar-btn" id="notifBtn" aria-label="Notifications">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a5.5 5.5 0 00-5.5 5.5v3L1 11v1h14v-1l-1.5-1.5v-3A5.5 5.5 0 008 1zM6.5 13a1.5 1.5 0 003 0h-3z"/></svg>
+          <span class="notif-badge" id="notifBadge">5</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <div class="page-content">
+      <div class="page-header flex items-center justify-between">
+        <div>
+          <h1 class="page-title">Port Operations Dashboard</h1>
+          <p class="page-subtitle">Real-time port intelligence â€” Hamburg Container Terminal Â· Simulated demo data</p>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <a href="simulator.html" class="btn btn-ai btn-sm">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="2"/><path d="M8 2a6 6 0 100 12A6 6 0 008 2zm0 1.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z" opacity=".6"/></svg>
+            Run Simulation
+          </a>
+          <a href="reports.html" class="btn btn-secondary btn-sm">Generate Report</a>
+        </div>
+      </div>
+
+      <!-- KPI Strip -->
+      <div class="kpi-strip" id="kpiStrip">
+        <!-- Filled by dashboard.js -->
+      </div>
+
+      <!-- Map + AI Reco -->
+      <div class="port-map-section">
+        <!-- Port Map -->
+        <div class="port-map">
+          <div class="port-map-header">
+            <span class="card-title-lg">Live Port Operations Map</span>
+            <div style="display:flex;gap:8px;align-items:center;">
+              <span style="font-size:11px;color:var(--text-muted);">Simulated positions</span>
+              <span class="badge idle" style="font-size:10px;">DEMO DATA</span>
+            </div>
+          </div>
+          <div class="port-map-canvas" id="portMapCanvas">
+            <!-- Rendered by dashboard.js -->
+          </div>
+          <!-- Map tooltip -->
+          <div class="map-tooltip" id="mapTooltip"></div>
+        </div>
+
+        <!-- Right panel -->
+        <div class="dashboard-right">
+          <!-- AI Recommendations -->
+          <div class="ai-recommendations">
+            <div class="ai-rec-header">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" style="color:var(--accent-cyan);"><circle cx="8" cy="8" r="2"/><path d="M8 2a6 6 0 100 12A6 6 0 008 2zm0 1.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z" opacity=".6"/></svg>
+              <span class="ai-rec-title">AI Immediate Actions</span>
+            </div>
+            <div id="aiRecList"><!-- Filled by dashboard.js --></div>
+          </div>
+
+          <!-- Live Feed -->
+          <div class="live-feed">
+            <div class="live-feed-header">
+              <div class="live-feed-pulse"></div>
+              <span style="font-size:12px;font-weight:600;color:var(--text-secondary);">Operational Events</span>
+            </div>
+            <div class="live-feed-list" id="liveFeedList">
+              <!-- Filled by dashboard.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom section -->
+      <div class="dashboard-bottom">
+        <!-- Top Risk Vessels -->
+        <div class="card" style="padding:16px;">
+          <div class="card-header" style="margin-bottom:12px;">
+            <span class="card-title">Top Risk Vessels</span>
+            <a href="vessels.html" class="btn btn-ghost btn-sm">View All â†’</a>
+          </div>
+          <div class="risk-vessel-list" id="riskVesselList">
+            <!-- Filled by dashboard.js -->
+          </div>
+        </div>
+
+        <!-- 72h Forecast -->
+        <div class="card" style="padding:16px;">
+          <div class="card-header" style="margin-bottom:12px;">
+            <span class="card-title">72-Hour Congestion Forecast</span>
+            <a href="simulator.html" class="btn btn-ghost btn-sm">Details â†’</a>
+          </div>
+          <div class="forecast-mini" id="forecastMini">
+            <!-- Filled by dashboard.js -->
+          </div>
+        </div>
+
+        <!-- Active Disruptions -->
+        <div class="card" style="padding:16px;">
+          <div class="card-header" style="margin-bottom:12px;">
+            <span class="card-title">Active Disruptions</span>
+            <a href="disruptions.html" class="btn btn-ghost btn-sm">View All â†’</a>
+          </div>
+          <div class="disruption-summary-list" id="disruptionSummaryList">
+            <!-- Filled by dashboard.js -->
+          </div>
+        </div>
+      </div>
+    </div><!-- /page-content -->
+  </main><!-- /main-content -->
+</div><!-- /app-layout -->
+
+<!-- Notification Panel -->
+<div class="notif-panel" id="notifPanel">
+  <div class="notif-panel-header">
+    <span class="notif-panel-title">Notifications</span>
+    <button class="btn btn-ghost btn-sm" id="notifClose">âœ•</button>
+  </div>
+  <div id="notifList"></div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- Vessel Detail Modal -->
+<div class="modal-overlay" id="vesselModal">
+  <div class="modal-panel">
+    <div class="modal-header">
+      <span class="modal-title" id="vesselModalTitle">Vessel Details</span>
+      <button class="modal-close" data-modal-close="vesselModal" aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M12.7 3.3l-1.4-1.4L8 5.2 4.7 1.9 3.3 3.3 6.6 6.6l-3.3 3.4 1.4 1.4L8 8.1l3.3 3.3 1.4-1.4-3.3-3.4z"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="vesselModalBody"></div>
+  </div>
+</div>
+
+<!-- Berth Detail Modal -->
+<div class="modal-overlay" id="berthModal">
+  <div class="modal-panel">
+    <div class="modal-header">
+      <span class="modal-title" id="berthModalTitle">Berth Details</span>
+      <button class="modal-close" data-modal-close="berthModal" aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M12.7 3.3l-1.4-1.4L8 5.2 4.7 1.9 3.3 3.3 6.6 6.6l-3.3 3.4 1.4 1.4L8 8.1l3.3 3.3 1.4-1.4-3.3-3.4z"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="berthModalBody"></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

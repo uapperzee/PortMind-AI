@@ -1,0 +1,110 @@
+[
+  {
+    "id": "B-01", "name": "Berth 01", "location": "North Terminal",
+    "capacity": 2000, "currentVessel": "V-121", "nextVessel": "V-101",
+    "availableAt": "2026-07-16T06:00:00", "cranes": ["C-01", "C-02"],
+    "status": "Occupied", "utilisation": 94, "length": 350, "depth": 16,
+    "schedule": [
+      { "vessel": "V-121", "start": "2026-07-15T06:00:00", "end": "2026-07-16T06:00:00" },
+      { "vessel": "V-101", "start": "2026-07-16T06:00:00", "end": "2026-07-16T18:00:00" }
+    ]
+  },
+  {
+    "id": "B-02", "name": "Berth 02", "location": "North Terminal",
+    "capacity": 1800, "currentVessel": "V-102", "nextVessel": "V-113",
+    "availableAt": "2026-07-15T19:30:00", "cranes": ["C-03", "C-04"],
+    "status": "Occupied", "utilisation": 78, "length": 320, "depth": 15,
+    "schedule": [
+      { "vessel": "V-102", "start": "2026-07-15T07:30:00", "end": "2026-07-15T19:30:00" },
+      { "vessel": "V-113", "start": "2026-07-15T20:00:00", "end": "2026-07-16T14:00:00" }
+    ]
+  },
+  {
+    "id": "B-03", "name": "Berth 03", "location": "East Terminal",
+    "capacity": 3000, "currentVessel": "V-103", "nextVessel": "V-104",
+    "availableAt": "2026-07-15T09:00:00", "cranes": ["C-05", "C-06"],
+    "status": "Congested", "utilisation": 100, "length": 400, "depth": 18,
+    "schedule": [
+      { "vessel": "V-103", "start": "2026-07-15T08:00:00", "end": "2026-07-16T08:00:00" },
+      { "vessel": "V-104", "start": "2026-07-16T08:00:00", "end": "2026-07-16T20:00:00" },
+      { "vessel": "V-123", "start": "2026-07-16T20:30:00", "end": "2026-07-17T20:30:00" }
+    ]
+  },
+  {
+    "id": "B-04", "name": "Berth 04", "location": "East Terminal",
+    "capacity": 2200, "currentVessel": "V-105", "nextVessel": "V-114",
+    "availableAt": "2026-07-15T21:00:00", "cranes": ["C-07", "C-08"],
+    "status": "Occupied", "utilisation": 82, "length": 360, "depth": 16,
+    "schedule": [
+      { "vessel": "V-105", "start": "2026-07-15T09:00:00", "end": "2026-07-15T21:00:00" },
+      { "vessel": "V-114", "start": "2026-07-15T22:30:00", "end": "2026-07-16T06:30:00" },
+      { "vessel": "V-124", "start": "2026-07-16T08:00:00", "end": "2026-07-17T04:00:00" }
+    ]
+  },
+  {
+    "id": "B-05", "name": "Berth 05", "location": "South Terminal",
+    "capacity": 2800, "currentVessel": "V-106", "nextVessel": "V-115",
+    "availableAt": "2026-07-16T09:30:00", "cranes": ["C-09", "C-10"],
+    "status": "Congested", "utilisation": 97, "length": 390, "depth": 17,
+    "schedule": [
+      { "vessel": "V-106", "start": "2026-07-15T09:30:00", "end": "2026-07-16T09:30:00" },
+      { "vessel": "V-115", "start": "2026-07-16T10:00:00", "end": "2026-07-17T10:00:00" },
+      { "vessel": "V-125", "start": "2026-07-17T04:00:00", "end": "2026-07-18T04:00:00" }
+    ]
+  },
+  {
+    "id": "B-06", "name": "Berth 06", "location": "South Terminal",
+    "capacity": 1500, "currentVessel": "V-107", "nextVessel": "V-116",
+    "availableAt": "2026-07-15T22:00:00", "cranes": ["C-11", "C-12"],
+    "status": "Occupied", "utilisation": 65, "length": 280, "depth": 14,
+    "schedule": [
+      { "vessel": "V-107", "start": "2026-07-15T10:00:00", "end": "2026-07-15T22:00:00" },
+      { "vessel": "V-116", "start": "2026-07-16T00:00:00", "end": "2026-07-16T12:00:00" },
+      { "vessel": "V-126", "start": "2026-07-16T13:00:00", "end": "2026-07-17T13:00:00" }
+    ]
+  },
+  {
+    "id": "B-07", "name": "Berth 07", "location": "West Terminal",
+    "capacity": 2500, "currentVessel": null, "nextVessel": "V-108",
+    "availableAt": "2026-07-15T10:30:00", "cranes": ["C-13"],
+    "status": "Available", "utilisation": 20, "length": 370, "depth": 16,
+    "schedule": [
+      { "vessel": "V-108", "start": "2026-07-15T10:30:00", "end": "2026-07-16T06:00:00" },
+      { "vessel": "V-117", "start": "2026-07-16T07:00:00", "end": "2026-07-16T21:00:00" },
+      { "vessel": "V-127", "start": "2026-07-17T00:00:00", "end": "2026-07-18T00:00:00" }
+    ]
+  },
+  {
+    "id": "B-08", "name": "Berth 08", "location": "West Terminal",
+    "capacity": 1600, "currentVessel": "V-109", "nextVessel": "V-118",
+    "availableAt": "2026-07-16T11:00:00", "cranes": ["C-14"],
+    "status": "Occupied", "utilisation": 88, "length": 295, "depth": 15,
+    "schedule": [
+      { "vessel": "V-109", "start": "2026-07-15T11:00:00", "end": "2026-07-16T11:00:00" },
+      { "vessel": "V-118", "start": "2026-07-16T12:00:00", "end": "2026-07-17T12:00:00" },
+      { "vessel": "V-128", "start": "2026-07-17T12:00:00", "end": "2026-07-18T00:00:00" }
+    ]
+  },
+  {
+    "id": "B-09", "name": "Berth 09", "location": "North Terminal",
+    "capacity": 1200, "currentVessel": "V-110", "nextVessel": "V-119",
+    "availableAt": "2026-07-15T23:30:00", "cranes": ["C-15"],
+    "status": "Occupied", "utilisation": 71, "length": 260, "depth": 13,
+    "schedule": [
+      { "vessel": "V-110", "start": "2026-07-15T11:30:00", "end": "2026-07-15T23:30:00" },
+      { "vessel": "V-119", "start": "2026-07-16T00:00:00", "end": "2026-07-17T00:00:00" },
+      { "vessel": "V-129", "start": "2026-07-17T04:00:00", "end": "2026-07-18T04:00:00" }
+    ]
+  },
+  {
+    "id": "B-10", "name": "Berth 10", "location": "East Terminal",
+    "capacity": 1400, "currentVessel": "V-111", "nextVessel": "V-120",
+    "availableAt": "2026-07-16T12:00:00", "cranes": ["C-01", "C-03"],
+    "status": "Occupied", "utilisation": 76, "length": 275, "depth": 14,
+    "schedule": [
+      { "vessel": "V-111", "start": "2026-07-15T12:00:00", "end": "2026-07-16T12:00:00" },
+      { "vessel": "V-120", "start": "2026-07-16T13:00:00", "end": "2026-07-17T01:00:00" },
+      { "vessel": "V-130", "start": "2026-07-17T02:00:00", "end": "2026-07-18T02:00:00" }
+    ]
+  }
+]
