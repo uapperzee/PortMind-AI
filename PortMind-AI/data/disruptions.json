@@ -1,0 +1,92 @@
+[
+  {
+    "id": "D-001", "type": "Weather", "subtype": "Heavy Rain", "severity": "High",
+    "location": "North Terminal", "affectedBerths": ["B-01", "B-02", "B-09"],
+    "affectedVessels": ["V-101", "V-102", "V-121"],
+    "startTime": "2026-07-15T06:00:00", "expectedDuration": 8,
+    "estimatedImpact": "Reduced crane operations. 3 vessels may face 2–4 hour delays.",
+    "status": "Active",
+    "description": "Heavy rainfall reducing visibility and crane operating speed by 40%."
+  },
+  {
+    "id": "D-002", "type": "Equipment", "subtype": "Crane Failure", "severity": "Critical",
+    "location": "Berth 03", "affectedBerths": ["B-03"],
+    "affectedVessels": ["V-103", "V-104"],
+    "startTime": "2026-07-15T07:15:00", "expectedDuration": 12,
+    "estimatedImpact": "Berth 03 operating at 50% crane capacity. V-104 delay estimated at 6 hours.",
+    "status": "Active",
+    "description": "STS Crane 06 hydraulic failure. Maintenance team on-site."
+  },
+  {
+    "id": "D-003", "type": "Port Operations", "subtype": "Berth Closure", "severity": "High",
+    "location": "East Terminal Berth 03", "affectedBerths": ["B-03"],
+    "affectedVessels": ["V-104", "V-123"],
+    "startTime": "2026-07-15T09:00:00", "expectedDuration": 6,
+    "estimatedImpact": "Berth 03 closure forces V-104 to queue. Estimated 5-hour additional delay.",
+    "status": "Active",
+    "description": "Structural inspection required on Berth 03 quay apron. Emergency closure."
+  },
+  {
+    "id": "D-004", "type": "Weather", "subtype": "Storm", "severity": "Medium",
+    "location": "Outer Harbour", "affectedBerths": [],
+    "affectedVessels": ["V-119", "V-126", "V-127"],
+    "startTime": "2026-07-15T14:00:00", "expectedDuration": 6,
+    "estimatedImpact": "Incoming vessels may face 1–2 hour navigation delays in outer harbour.",
+    "status": "Active",
+    "description": "Force 6 winds forecast in outer harbour. Pilot boarding may be delayed."
+  },
+  {
+    "id": "D-005", "type": "Labour", "subtype": "Port Strike", "severity": "Critical",
+    "location": "South Terminal", "affectedBerths": ["B-05", "B-06"],
+    "affectedVessels": ["V-106", "V-107", "V-115", "V-116"],
+    "startTime": "2026-07-15T12:00:00", "expectedDuration": 24,
+    "estimatedImpact": "South Terminal at 30% staffing. Estimated turnaround time doubled.",
+    "status": "Active",
+    "description": "Stevedore union work-to-rule action. Labour output severely reduced."
+  },
+  {
+    "id": "D-006", "type": "Equipment", "subtype": "Crane Failure", "severity": "Medium",
+    "location": "Berth 02", "affectedBerths": ["B-02"],
+    "affectedVessels": ["V-102", "V-113"],
+    "startTime": "2026-07-14T22:00:00", "expectedDuration": 20,
+    "estimatedImpact": "C-04 offline reduces B-02 throughput by 50%.",
+    "status": "Active",
+    "description": "STS Crane 04 undergoing hydraulic system overhaul. Single crane operation at B-02."
+  },
+  {
+    "id": "D-007", "type": "Infrastructure", "subtype": "Road Congestion", "severity": "Medium",
+    "location": "Port Gate 2 / A7 Motorway", "affectedBerths": [],
+    "affectedVessels": [],
+    "startTime": "2026-07-15T07:00:00", "expectedDuration": 5,
+    "estimatedImpact": "Truck access delays. Container collection turnaround time +1.5 hours.",
+    "status": "Active",
+    "description": "A7 motorway incident causing significant HGV queuing at Port Gate 2."
+  },
+  {
+    "id": "D-008", "type": "Weather", "subtype": "Fog", "severity": "Low",
+    "location": "Approach Channel", "affectedBerths": [],
+    "affectedVessels": ["V-124", "V-125"],
+    "startTime": "2026-07-16T03:00:00", "expectedDuration": 3,
+    "estimatedImpact": "Reduced vessel approach speed. Minor ETA delays expected.",
+    "status": "Forecast",
+    "description": "Dense fog advisory for approach channel. Pilot vessels on standby."
+  },
+  {
+    "id": "D-009", "type": "Equipment", "subtype": "Equipment Failure", "severity": "Low",
+    "location": "Yard Zone C", "affectedBerths": [],
+    "affectedVessels": [],
+    "startTime": "2026-07-15T10:30:00", "expectedDuration": 4,
+    "estimatedImpact": "Yard vehicle breakdown reduces Zone C throughput by 20%.",
+    "status": "Active",
+    "description": "Reach stacker RS-07 hydraulic fault. Backup equipment mobilised."
+  },
+  {
+    "id": "D-010", "type": "Weather", "subtype": "High Wind", "severity": "High",
+    "location": "West Terminal", "affectedBerths": ["B-07", "B-08"],
+    "affectedVessels": ["V-108", "V-109", "V-117"],
+    "startTime": "2026-07-15T16:00:00", "expectedDuration": 10,
+    "estimatedImpact": "Crane operations suspended at B-07 and B-08. Estimated 3-hour delay for affected vessels.",
+    "status": "Forecast",
+    "description": "Wind speed forecast to exceed 60 km/h at West Terminal. STS crane operations will be suspended per safety protocol."
+  }
+]

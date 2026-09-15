@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yard Intelligence — PortMind AI</title>
+  <link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    .yard-summary-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:20px; }
+    .zone-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:20px; }
+    .zone-card { background:var(--bg-surface); border:1px solid var(--border); border-radius:12px; padding:18px; cursor:pointer; transition:border-color var(--transition),transform var(--transition); }
+    .zone-card:hover { border-color:var(--accent-blue); transform:translateY(-1px); }
+    .zone-card.critical-zone { border-color:rgba(248,81,73,0.5); background:rgba(248,81,73,0.03); }
+    .zone-card.high-zone { border-color:rgba(210,153,34,0.4); }
+    .zone-pct { font-size:36px; font-weight:800; font-family:var(--font-mono); }
+    @media(max-width:768px){ .yard-summary-row{grid-template-columns:repeat(2,1fr);} .zone-grid{grid-template-columns:1fr 1fr;} }
+    @media(max-width:480px){ .zone-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo"><div class="logo-icon">P</div><div class="logo-text"><span class="logo-name">PortMind</span><span class="logo-sub">AI</span></div><button class="sidebar-toggle" id="sidebarToggle"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M15 8l-6-6-1.4 1.4L12.2 8l-4.6 4.6L9 14z"/><path d="M8 8L2 2 .6 3.4 5.2 8 .6 12.6 2 14z"/></svg></button></div>
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Operations</span>
+      <a href="dashboard.html" class="nav-item" data-page="dashboard.html"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2h5v5H2zm7 0h5v5H9zm-7 7h5v5H2zm7 0h5v5H9z" opacity=".6"/><path d="M2 2h5v5H2z"/></svg></span><span class="nav-label">Dashboard</span></a>
+      <a href="vessels.html" class="nav-item" data-page="vessels.html"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M14 11H2L1 14h14l-1-3zM8 1L4 8h8L8 1z"/></svg></span><span class="nav-label">Vessel Operations</span></a>
+      <a href="berths.html" class="nav-item" data-page="berths.html"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M1 3h14v2H1zm0 4h14v2H1zm0 4h14v2H1z"/></svg></span><span class="nav-label">Berth Management</span></a>
+      <a href="cranes.html" class="nav-item" data-page="cranes.html"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4 14V4H2v10H1v1h14v-1h-1V4h-2v10H4zM7 2h2v2H7V2z"/></svg></span><span class="nav-label">Crane Operations</span></a>
+      <a href="yard.html" class="nav-item" data-page="yard.html"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="4" width="6" height="4" rx="1"/><rect x="9" y="4" width="6" height="4" rx="1"/><rect x="1" y="10" width="6" height="4" rx="1"/><rect x="9" y="10" width="6" height="4" rx="1"/></svg></span><span class="nav-label">Yard Intelligence</span></a>
+      <a href="disruptions.html" class="nav-item" data-page="disruptions.html"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1L1 13h14L8 1zm0 3l4.5 7.5h-9L8 4zm-.5 2v3h1V6h-1zm0 4v1h1v-1h-1z"/></svg></span><span class="nav-label">Disruptions</span><span class="nav-badge">5</span></a>
+      <span class="nav-section-label">AI Tools</span>
+      <a href="simulator.html" class="nav-item" data-page="simulator.html"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="2"/><path d="M8 2a6 6 0 100 12A6 6 0 008 2zm0 1.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z" opacity=".6"/></svg></span><span class="nav-label">AI Simulator</span></a>
+      <a href="copilot.html" class="nav-item" data-page="copilot.html"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm-1 3v4.5l3 1.8-.5.9L6 9V4h1z"/></svg></span><span class="nav-label">AI Copilot</span></a>
+      <a href="reports.html" class="nav-item" data-page="reports.html"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4 1h8l3 3v11H1V1h3zm7 0v3h3L11 1z"/></svg></span><span class="nav-label">Reports</span></a>
+    </nav>
+    <div class="sidebar-bottom"><a href="#" class="nav-item" id="notifNavBtn"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a5.5 5.5 0 00-5.5 5.5v3L1 11v1h14v-1l-1.5-1.5v-3A5.5 5.5 0 008 1zM6.5 13a1.5 1.5 0 003 0h-3z"/></svg></span><span class="nav-label">Notifications</span><span class="nav-badge" id="notifNavCount">5</span></a><div class="sidebar-user"><div class="user-avatar">JM</div><div class="user-info"><div class="user-name">J. Mueller</div><div class="user-role">Port Operations Manager</div></div></div></div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content" id="mainContent">
+    <header class="topbar">
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M2 4h14v1.5H2zm0 4h14v1.5H2zm0 4h14v1.5H2z"/></svg></button>
+      <div class="topbar-breadcrumb"><span>PortMind AI</span><span class="crumb-sep">›</span><span class="crumb-current">Yard Intelligence</span></div>
+      <div class="topbar-right"><span class="topbar-time" id="topbarTime"></span><button class="topbar-btn" id="notifBtn"><svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a5.5 5.5 0 00-5.5 5.5v3L1 11v1h14v-1l-1.5-1.5v-3A5.5 5.5 0 008 1zM6.5 13a1.5 1.5 0 003 0h-3z"/></svg><span class="notif-badge" id="notifBadge">5</span></button></div>
+    </header>
+
+    <div class="page-content">
+      <div class="page-header">
+        <h1 class="page-title">Yard Intelligence</h1>
+        <p class="page-subtitle">Container yard capacity monitoring · 6 zones · AI redistribution recommendations · Simulated demo data</p>
+      </div>
+
+      <!-- Yard Summary Cards -->
+      <div class="yard-summary-row" id="yardSummary"></div>
+
+      <!-- AI Recommendations -->
+      <div style="margin-bottom:20px;">
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--accent-cyan);margin-bottom:12px;display:flex;align-items:center;gap:6px;">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="2"/><path d="M8 2a6 6 0 100 12A6 6 0 008 2zm0 1.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z" opacity=".6"/></svg>
+          AI Yard Recommendations
+        </div>
+        <div id="yardAiRecs" class="grid-3"></div>
+      </div>
+
+      <!-- Zone Cards -->
+      <div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:12px;">Zone-by-Zone Capacity</div>
+      <div class="zone-grid" id="zoneGrid"></div>
+    </div>
+  </main>
+</div>
+
+<div class="notif-panel" id="notifPanel"><div class="notif-panel-header"><span class="notif-panel-title">Notifications</span><button class="btn btn-ghost btn-sm" id="notifClose">✕</button></div><div id="notifList"></div></div>
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- Zone Detail Modal -->
+<div class="modal-overlay" id="zoneModal">
+  <div class="modal-panel" style="max-width:540px;">
+    <div class="modal-header">
+      <span class="modal-title" id="zoneModalTitle">Zone Details</span>
+      <button class="modal-close" data-modal-close="zoneModal">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M12.7 3.3l-1.4-1.4L8 5.2 4.7 1.9 3.3 3.3 6.6 6.6l-3.3 3.4 1.4 1.4L8 8.1l3.3 3.3 1.4-1.4-3.3-3.4z"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="zoneModalBody"></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script><script src="js/app.js"></script><script src="js/yard.js"></script>
+</body>
+</html>

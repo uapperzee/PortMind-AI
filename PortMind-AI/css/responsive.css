@@ -1,0 +1,173 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   PortMind AI — Responsive Stylesheet
+   responsive.css
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* ── TABLET (≤ 1024px) ───────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 200px;
+    --content-padding: 18px;
+  }
+
+  .grid-6 { grid-template-columns: repeat(3, 1fr); }
+  .grid-5 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+  .kpi-value { font-size: 26px; }
+}
+
+/* ── SMALL TABLET / LARGE MOBILE (≤ 768px) ───────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 0px;
+    --sidebar-collapsed: 0px;
+    --topbar-height: 56px;
+    --content-padding: 14px;
+  }
+
+  /* Sidebar becomes a drawer */
+  .sidebar {
+    transform: translateX(-100%);
+    width: 240px !important;
+    transition: transform var(--transition-md);
+    z-index: 200;
+  }
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  /* Mobile overlay when sidebar open */
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 190;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-md);
+  }
+  .sidebar-overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+  }
+
+  /* Show mobile menu button */
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+
+  /* Hide sidebar toggle on mobile */
+  .sidebar-toggle { display: none; }
+
+  .grid-6,
+  .grid-5,
+  .grid-4,
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+
+  .grid-2 { grid-template-columns: 1fr; }
+
+  .kpi-value { font-size: 24px; }
+
+  .topbar { padding: 0 14px; gap: 10px; }
+  .topbar-time { display: none; }
+  .topbar-status span:not(.status-dot) { display: none; }
+
+  /* Table horizontal scroll */
+  .table-wrap { border-radius: 8px; }
+
+  /* Hide some table columns */
+  .table-pro .hide-mobile { display: none; }
+
+  /* Modal full-screen on mobile */
+  .modal-overlay { padding: 0; align-items: flex-end; }
+  .modal-panel {
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+    max-width: 100%;
+    max-height: 90vh;
+  }
+
+  /* Filter bar scroll */
+  .filter-bar { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+
+  .notif-panel { width: 100%; }
+
+  /* Port map */
+  .port-map { min-height: 280px; }
+
+  /* Dashboard forecast chart */
+  .forecast-chart-wrap { overflow-x: auto; }
+}
+
+/* ── MOBILE (≤ 480px) ────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  :root {
+    --content-padding: 12px;
+  }
+
+  .grid-6,
+  .grid-5,
+  .grid-4,
+  .grid-3,
+  .grid-2 { grid-template-columns: 1fr; }
+
+  .page-title { font-size: 18px; }
+
+  .kpi-value { font-size: 28px; }
+
+  .btn-lg {
+    padding: 9px 16px;
+    font-size: 13px;
+  }
+
+  .card { padding: 14px; }
+
+  .detail-grid { grid-template-columns: 1fr; }
+
+  /* Hide table columns more aggressively */
+  .table-pro .hide-sm { display: none; }
+}
+
+/* ── MOBILE MENU BUTTON ──────────────────────────────────────────────────── */
+.mobile-menu-btn {
+  display: none;
+  width: 34px; height: 34px;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.mobile-menu-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* ── LANDING PAGE RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-layout      { flex-direction: column; text-align: center; }
+  .hero-actions     { justify-content: center; }
+  .features-grid    { grid-template-columns: repeat(2, 1fr); }
+  .how-grid         { grid-template-columns: repeat(2, 1fr); }
+  .use-cases-grid   { grid-template-columns: 1fr; }
+  .benefit-cols     { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .landing-nav ul   { display: none; }
+  .features-grid    { grid-template-columns: 1fr; }
+  .how-grid         { grid-template-columns: 1fr; }
+  .hero-title       { font-size: 32px; }
+  .hero-tagline     { font-size: 16px; }
+  .section-title    { font-size: 22px; }
+  .hero-actions     { flex-direction: column; align-items: center; }
+  .stats-bar        { grid-template-columns: repeat(2, 1fr); }
+}
