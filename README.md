@@ -83,10 +83,13 @@ PortMind-AI
 
 ## ⚡ How to Run
 
-Click below to run and explore our website.
+### 🌐 Live Website
 
-https://uapperzee.github.io/bob-ai-hackathon--EntropyX-/PortMind-AI/
+Click below to launch and explore **PortMind AI**:
 
+👉 **[🚀 Launch PortMind AI](https://uapperzee.github.io/bob-ai-hackathon--EntropyX-/PortMind-AI/)**
+
+No installation required. The website runs directly in your browser.
 ---
 
 ## 🖥️ Demo
