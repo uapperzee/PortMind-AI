@@ -9,7 +9,7 @@
 | **Team Name** | EntropyX |
 | **Track** | AI |
 | **Team Lead** | Zeeshan Metaliya — uapperzeenu2710@gmail.com |
-| **Members** | Heer Kotadiya, Heli Lukhi, Daksh Dethaliya |
+| **Members** | Heer Kotadiya , Heli Lukhi , Daksh Dethaliya |
 
 ---
 
