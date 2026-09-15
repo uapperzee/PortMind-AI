@@ -1,4 +1,4 @@
-# 🚀 PortMind-AI
+<img width="512" height="384" alt="image" src="https://github.com/user-attachments/assets/80ec87f5-b7e8-494f-a2cf-b42acb7893de" /># 🚀 PortMind-AI
 
 ---
 
@@ -116,11 +116,15 @@ cp .env.example .env
 
 ## ⚠️ Known Limitations
 
-> Be honest — judges appreciate transparency over overclaiming.
-
-- [Limitation 1: e.g., "Authentication is mocked — not production-ready"]
-- [Limitation 2: e.g., "Only tested on Chrome"]
-- [Limitation 3: e.g., "Feature X is scaffolded but not fully implemented"]
+- Limitation 1: No real-time port data - The website appears to depend on available/input data rather than directly receiving live information from port authorities or shipping systems.
+- 
+- Limitation 2: AI predictions may not always be accurate - Risk scores and disruption predictions are AI-based, so unexpected events can produce incorrect results.
+- 
+- Limitation 3: Limited live route information - The alternative-route recommendation may not include every real-world factor such as sudden road closures, customs delays, accidents, or local restrictions.
+- 
+- Limitation 4: Dependency on data quality - Incorrect, incomplete, or outdated shipment/port information can directly affect the risk analysis and recommendations.
+- 
+- Limitation 5: AI recommendation is decision support - The suggested route or risk level should not be treated as a guaranteed decision. Human logistics experts may still need to verify important decisions.
 
 ---
 
