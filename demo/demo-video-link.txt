@@ -1,0 +1,21 @@
+https://youtu.be/your-demo-video-link-here
+
+Replace the URL above with your real demo video link before submission.
+
+Accepted platforms:
+  - YouTube (public or unlisted)
+  - Loom (https://www.loom.com/share/...)
+  - IBM Box (https://ibm.box.com/s/...)
+  - Google Drive (set to "Anyone with the link can view")
+
+Video requirements:
+  - Length: 3–5 minutes maximum
+  - Must show the application running (not just slides)
+  - Recommended walkthrough:
+    1. Landing page → Dashboard (show 73% congestion risk)
+    2. Disruptions → Calculate Impact on D-002
+    3. Simulator → RUN SIMULATION (Weather/High/12h → 31 vessels, 87%)
+    4. Vessels → V-104 risk 91 → View AI Analysis
+    5. Berths → Optimise Berths → before/after comparison
+    6. Copilot → "What should the port manager do now?"
+    7. Reports → Generate AI Operations Brief → Print
