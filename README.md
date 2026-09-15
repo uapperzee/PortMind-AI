@@ -102,11 +102,9 @@ https://uapperzee.github.io/bob-ai-hackathon--EntropyX-/PortMind-AI/
 
 ## ⚠️ Known Limitations
 
-- Limitation 1: No real-time port data - The website appears to depend on available/input data rather than directly receiving live information from port authorities or shipping systems.
-- Limitation 2: AI predictions may not always be accurate - Risk scores and disruption predictions are AI-based, so unexpected events can produce incorrect results.
-- Limitation 3: Limited live route information - The alternative-route recommendation may not include every real-world factor such as sudden road closures, customs delays, accidents, or local restrictions.
-- Limitation 4: Dependency on data quality - Incorrect, incomplete, or outdated shipment/port information can directly affect the risk analysis and recommendations.
-- Limitation 5: AI recommendation is decision support - The suggested route or risk level should not be treated as a guaranteed decision. Human logistics experts may still need to verify important decisions.
+- Limitation 1: AI predictions may not always be accurate - Risk scores and disruption predictions are AI-based, so unexpected events can produce incorrect results.
+- Limitation 2: Limited live route information - The alternative-route recommendation may not include every real-world factor such as sudden road closures, customs delays, accidents, or local restrictions.
+- Limitation 3: Dependency on data quality - Incorrect, incomplete, or outdated shipment/port information can directly affect the risk analysis and recommendations.
 
 ---
 
