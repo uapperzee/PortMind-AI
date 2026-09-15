@@ -56,17 +56,27 @@ It also generates a 72-hour port operations plan with real-time alerts and recom
 ## 📁 Repository Structure
 
 ```
-├── src/                  # All source code
-├── docs/                 # Written documentation
-│   ├── problem-statement.md
-│   ├── solution-overview.md
-│   ├── architecture.md
-│   └── setup-guide.md
-├── demo/                 # Demo artifacts
-│   ├── screenshots/      # App screenshots
-│   └── demo-video-link.txt  # Link to demo video
-├── presentation/         # Slide deck
-└── submission.yaml       # Structured submission metadata
+PortMind-AI
+│
+├── 📄 README.md
+├── 📄 index.html
+│
+├── 📁 pages
+│   ├── dashboard.html
+│   ├── vessels.html
+│   ├── berths.html
+│   ├── cranes.html
+│   ├── yard.html
+│   ├── disruptions.html
+│   ├── simulator.html
+│   ├── copilot.html
+│   └── reports.html
+│
+├── 📁 css
+├── 📁 js
+├── 📁 data
+├── 📁 assets
+└── 📁 docs
 ```
 
 ---
