@@ -5,19 +5,19 @@
 # Problem Domain: L1 — Container Congestion Predictor & Port Operations Optimiser
 # =============================================================================
 
-team:
+team: "EntropyX"
   name: "PortMind AI"
   track: "AI"
-  lead:
-    name: "J. Mueller"
-    email: "j.mueller@portmind.ai"
+  lead: 
+    name: "Zeeshan Metaliya"
+    email: "26dce048@charusat.edu.in"
   members:
-    - name: "J. Mueller"
-      email: "j.mueller@portmind.ai"
-    - name: ""
-      email: ""
-    - name: ""
-      email: ""
+    - name: "Heer Kotadiya"
+      email: "26dce041@charusat.edu.in"
+    - name: "Heli Lukhi"
+      email: "26dce043@charusat.edu.in"
+    - name: "Daksh Dethaliya"
+      email: "26dce018@charusat.edu.in"
 
 submission:
   title: "PortMind AI — Container Congestion Predictor & Port Operations Optimiser"
