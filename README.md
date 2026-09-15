@@ -15,27 +15,29 @@
 
 ## 🎯 Problem Statement
 
-> In 2–3 sentences: What problem does your project solve? Who experiences this problem?
-
-[Describe the real-world problem your project addresses. Be specific about who the user is and what pain point they face.]
+Port congestion causes major delays, increased costs, and inefficient vessel operations.
+Current berth, crane, and yard allocation is largely manual and reactive.
+We need an AI-based solution that predicts congestion, recommends alternate routes, optimizes port resources, and generates a 72-hour operations plan for supervisors.
 
 ---
 
 ## 💡 Solution
 
-> In 2–3 sentences: What did you build? How does it solve the problem above?
-
-[Describe your solution clearly. Explain the core mechanism — what makes it work.]
+Develop an AI-powered system that predicts port congestion using vessel schedules and berth capacity.
+It recommends alternate routes for vessels at high risk of delay.
+The system optimizes berth, crane, and yard allocation automatically.
+It also generates a 72-hour port operations plan with real-time alerts and recommendations.
 
 ---
 
 ## ✨ Key Features
 
-- **Feature 1:** [Brief description — e.g., "Real-time anomaly detection using watsonx.ai"]
-- **Feature 2:** [Brief description]
-- **Feature 3:** [Brief description]
-- **Feature 4:** [Optional]
-- **Feature 5:** [Optional]
+- **Feature 1:** Congestion Prediction – Predicts port congestion and identifies hotspots in advance.
+- **Feature 2:** Smart Route Recommendation – Suggests alternate routes or ports to avoid delays.
+- **Feature 3:** Berth Optimization – Assigns vessels to the most suitable available berths.
+- **Feature 4:** Crane Allocation – Optimizes crane assignments for faster vessel handling.
+- **Feature 5:** 72-Hour Operations Plan – Generates an automated port schedule for upcoming operations.
+- **Feature 6:** Real-Time Alerts & Dashboard – Provides live vessel status, risk levels, and congestion alerts.
 
 ---
 
